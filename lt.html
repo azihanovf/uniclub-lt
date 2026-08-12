@@ -1141,6 +1141,20 @@
     .powered-by-badge {
       display: none !important;
     }
+
+    /* The appended site's global header styles must not paint a white bar
+       over the landing. Keep the logo and move it 40px below its old spot. */
+    .embeded-body > header {
+      background: transparent !important;
+      border: 0 !important;
+      box-shadow: none !important;
+      backdrop-filter: none !important;
+      padding: 0 !important;
+    }
+
+    .embeded-body > header .logo {
+      transform: translateY(10px) !important;
+    }
   </style>
   <script>
     const startBtn = document.querySelector(".start");
